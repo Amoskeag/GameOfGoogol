@@ -13,6 +13,8 @@ VERSION 1.01
 UPDATES:
 	4/8/2019, found error in Vector size going out of bounds, havent seen the error after some testing, needs to be fixed if patch wasnt enough. 
 
+	3/12/2022, I am back to working on this sillyness.
+
 */
 
 #include <iostream>
@@ -53,10 +55,6 @@ int main()
 
 		//seed the random
 		srand((unsigned)time(NULL));
-
-		//grid generators.
-
-		
 
 		//For holding the random values.
 		vector<int> dataSetVector;
@@ -117,9 +115,12 @@ void eulersChoice(vector<int> vect)
 	//When you leave the while loop you need to check the last value of the array. so we double check. (j <vect.size() will trigger the end of while before a check)
 	if (vect[j - 1] > maxValue)
 	{
-		maxValue = vect[j - 1]; //if the last value is the largest set, technically this means we failed to find the largest before flipping all the values, but thats for later polishing.
+		maxValue = vect[j - 1]; //if the last value is the largest in set, technically this means we failed to find the largest before flipping all the values, but thats for later polishing.
+
+		
 	}
 	
+
 	cout << "The maximum value I have calculated is: " << maxValue << endl;
 
 	cout << '\n';
@@ -159,6 +160,7 @@ void eulersChoice(vector<int> vect)
 	}
 	else
 	{
+		//This might be (and probably is) not how I should be trying to analyze the results of hundreds of results for post processing? I'd love suggesions.
 		cout << "Algorithm Success!" << endl;//and the opposite. 1 is a success.
 		ofstream outputFile("AlgResult.txt");
 		outputFile << "1";
