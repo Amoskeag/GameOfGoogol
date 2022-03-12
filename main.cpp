@@ -5,7 +5,8 @@ DATE: 3/31/2019
 DESCRIPTION: The Game of Googol. A C++ Solution by Arthur W. Aznive Jr. to test the probability that you can find the largest number before seeing the entire set.
 
 GOALS: -Needs to be able to output results to a file and run continuously to get a large data set of results to see how often the computer is able to find the largest value.
-	   -Random generator needs to be more random, look into a better generator code and find ways to increase the randomness of the computer (I know very little about this currently).
+	   -Random generator needs to be more "random", look into a better generator code and find ways to increase the randomness of the computer (I know very little about this currently). 
+	   -To note, numbers top out around 32,000.
 
 VERSION 1.01
 
